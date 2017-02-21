@@ -61,7 +61,7 @@ body{
 	position: relative;
 }
 #elevador{
-	background: #009dff;
+	background: url('../img/elevador.jpg') center #009dff no-repeat;
 	border: 1px solid #999;
 	width:160px; 
 	height: 90px;
@@ -70,24 +70,25 @@ body{
 	bottom: 5px;
 	left: 5px;
 	padding: 0 0 0 40px;
+	overflow: hidden;
 }
 #elevador .porta1{
     float: left;
     height: 90px;
     background: #00488c;
-    width: 70px;
+    width: 98px;
     border-right: 2px solid #319ff9;
     position: absolute;
-    left: 30px;
+    left: 0;
 }
 #elevador .porta2{
 	float: left;
 	height: 90px;
 	background: #00488c;
-    width: 70px;
+    width: 98px;
     border-left: 2px solid #319ff9;
     position: absolute;
-    right:30px; 
+    right:0px; 
 }
 section{
 	float: left;
