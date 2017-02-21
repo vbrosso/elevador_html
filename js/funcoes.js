@@ -83,10 +83,20 @@ $(document).ready(function() {
 				});
 				return false;
 			}
-			if ($(this).hasClass('ocupado')) {
-        		setTimeout(function() { andaElevador(); }, 2800);
-	        }
 		}
+		if ($(this).hasClass('ocupado')) {
+    		console.log(bThis);
+    		$(this).addClass('active');
+    		setTimeout(function() { 
+			$('#elevador').animate({
+	        	'bottom' : "5px"
+			},velocidade);
+	        $('#elevador').promise().done(function(){
+			    abrePorta();
+			});
+			return false;
+    		}, 5000);
+	    }
     });
     //PRIMEIRO ANDAR
     $('#andar1 .botao').click(function() {
@@ -117,6 +127,19 @@ $(document).ready(function() {
 		        return false;
 	    	}
     	}
+    	if ($(this).hasClass('ocupado')) {
+    		console.log(bThis);
+    		$(this).addClass('active');
+    		setTimeout(function() { 
+			$('#elevador').animate({
+	        	'bottom' : "137px"
+			},velocidade);
+	        $('#elevador').promise().done(function(){
+			    abrePorta();
+			});
+			return false;
+    		}, 5000);
+	    }
     });
     //SEGUNDO ANDAR
     $('#andar2 .botao').click(function() {
@@ -133,6 +156,7 @@ $(document).ready(function() {
 	        bThis.addClass('active');
 	        if( $('.porta1').css('left') == '0px'){
 				setTimeout(function() { andaElevador(); }, 2800);
+				$('.painel .botao').addClass('ocupado');
 	    	}else{
 	    		andaElevador();
 	    	}
@@ -143,7 +167,6 @@ $(document).ready(function() {
 		        $('#elevador').promise().done(function(){
 				    abrePorta();
 				});
-				$('.painel .botao').addClass('ocupado');
 		        return false;
 	    	}
 	    }
@@ -170,8 +193,7 @@ $(document).ready(function() {
 	        velocidade = andarDestino +- andarorigem
 	        if(velocidade < 0){
 	        	velocidade = velocidade * -1
-	        }
-	       
+	        }       
 	        bThis = $(this);
 	    	bThis.addClass('active');
 	    	if( $('.porta1').css('left') == '0px'){
@@ -189,6 +211,19 @@ $(document).ready(function() {
 				$('.painel .botao').addClass('ocupado');
 		        return false;
 		     }
+	    }
+	    if ($(this).hasClass('ocupado')) {
+    		console.log(bThis);
+    		$(this).addClass('active');
+    		setTimeout(function() { 
+			$('#elevador').animate({
+	        	'bottom' : "401px"
+			},velocidade);
+	        $('#elevador').promise().done(function(){
+			    abrePorta();
+			});
+			return false;
+    		}, 5000);
 	    }
     });
     //QUARTO ANDAR
@@ -214,10 +249,24 @@ $(document).ready(function() {
 				},velocidade);
 		       $('#elevador').promise().done(function(){
 				    abrePorta();
+				    $(bThis).removeClass('active');
 				});
 		       $('.painel .botao').addClass('ocupado');
 		        return false;
 	    	}
+	    }
+	    if ($(this).hasClass('ocupado')) {
+    		console.log('tes');
+    		$(this).addClass('active');
+    		setTimeout(function() { 
+			$('#elevador').animate({
+	        	'bottom' : "533px"
+			},velocidade);
+	        $('#elevador').promise().done(function(){
+			    abrePorta();
+			});
+			return false;
+    		}, 5000);
 	    }
     });
     //QUINTO ANDAR
@@ -249,5 +298,18 @@ $(document).ready(function() {
 		        return false;
 	    	}
     	}
+    	if ($(this).hasClass('ocupado')) {
+	    		console.log(bThis);
+	    		$(this).addClass('active');
+	    		setTimeout(function() { 
+				$('#elevador').animate({
+		        	'bottom' : "665px"
+				},velocidade);
+		        $('#elevador').promise().done(function(){
+				    abrePorta();
+				});
+				return false;
+	    		}, 5000);
+		    }
     });
 });
