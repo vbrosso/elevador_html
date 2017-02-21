@@ -1,0 +1,136 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	background: #eee;
+}
+.wrap{
+	margin: 0 auto;
+	width: 800px;
+}
+.predio{
+	float: left;
+	clear: both;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#elevador{
+	background: #009dff;
+	border: 1px solid #999;
+	width:160px; 
+	height: 90px;
+	float: left;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	padding: 0 0 0 40px;
+}
+#elevador .porta1{
+    float: left;
+    height: 90px;
+    background: #00488c;
+    width: 70px;
+    border-right: 2px solid #319ff9;
+    position: absolute;
+    left: 30px;
+}
+#elevador .porta2{
+	float: left;
+	height: 90px;
+	background: #00488c;
+    width: 70px;
+    border-left: 2px solid #319ff9;
+    position: absolute;
+    right:30px; 
+}
+section{
+	float: left;
+	clear: both;
+	width: 100%;
+}
+section .container{
+	background: #d8f9ff;
+	width: 500px;
+	height: 100px;
+	border: 1px solid #999;
+	margin:30px 0 0 0; 
+	float: left;
+}
+section .painel{
+	float: left;
+	margin: 0;
+	padding: 20px 0 0 20px; 
+	width: 200px;
+}
+section .painel h1{
+	text-align: center;
+	color: #333;
+	float: left;
+	width: 100%;
+	padding: 20px 0 0 0;
+}
+section .painel .botao{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #d8f9ff;
+	border: 1px solid #333;
+	margin: 10px 0 0 90px;
+}
+section .painel .botao:hover{
+	background: #009dff;
+}
+section .painel .botao.active{
+	background: #e82222;
+	cursor: no-drop;
+}
+
+section .painel .botao.ocupado{
+
+}
