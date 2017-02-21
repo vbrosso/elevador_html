@@ -74,7 +74,6 @@ $(document).ready(function() {
 	    		andaElevador();
 	    	}
 	    	function andaElevador(){
-				$('.painel .botao').addClass('ocupado');
 				$('#elevador').animate({
 					'bottom' : "5px"
 				},velocidade);
@@ -134,6 +133,7 @@ $(document).ready(function() {
 			$('#elevador').animate({
 	        	'bottom' : "137px"
 			},velocidade);
+			$(this).removeClass('active');
 	        $('#elevador').promise().done(function(){
 			    abrePorta();
 			});
@@ -208,7 +208,6 @@ $(document).ready(function() {
 		    	$('#elevador').promise().done(function(){
 				    abrePorta();
 				});
-				$('.painel .botao').addClass('ocupado');
 		        return false;
 		     }
 	    }
@@ -251,7 +250,6 @@ $(document).ready(function() {
 				    abrePorta();
 				    $(bThis).removeClass('active');
 				});
-		       $('.painel .botao').addClass('ocupado');
 		        return false;
 	    	}
 	    }
@@ -294,7 +292,6 @@ $(document).ready(function() {
 				    abrePorta();
 				    $(bThis).removeClass('active');
 				});
-		       	$('.painel .botao').addClass('ocupado');
 		        return false;
 	    	}
     	}
